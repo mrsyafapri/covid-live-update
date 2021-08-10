@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-bg {
+    background-color: #900000;
+}
+
+.bg-covid {
+    background-image: url(../images/bg-covid.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 8% 4%;
+    background-repeat: no-repeat;
+}
+
+.lobster-fm {
+    font-family: 'Lobster', cursive;
+}
+
+.poppins-fm {
+    font-family: 'Poppins', sans-serif;
+}

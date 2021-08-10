@@ -12,7 +12,7 @@ class WorldBar extends HTMLElement {
         const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
         this.innerHTML = '';
         this.innerHTML = `
-            <div class="text-center text-light border-bottom" style="background-image: url(${img}); background-position: center; background-size: cover; padding: 8% 4%; background-repeat: no-repeat;">
+            <div class="text-center text-light border-bottom" style="background-image: url(${img}); background-position: center; background-size: cover; padding: 10% 4%; background-repeat: no-repeat;">
                 <div class="container-fluid">
                     <div class="row mb-5">
                         <div class="col">

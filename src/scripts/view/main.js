@@ -1,43 +1,35 @@
-import axios from "axios";
+import $ from "jquery";
 import gsap from "gsap";
+import DataSource from "../data/data-source.js";
 import "../component/indonesia-bar.js";
 import "../component/world-bar.js";
 
 const main = () => {
-    const baseUrl = 'https://covid19.mathdro.id/api';
-
-    const getIndonesiaCase = async () => {
-        try {
-            const response = await axios.get(`${baseUrl}/countries/Indonesia`);
-            const coronaReportElement = document.querySelector('indonesia-bar');
-            coronaReportElement.coronaItem = response.data;
-        } catch (error) {
-            alert('Periksa koneksi internet Anda...');
-        }
-    };
-
-    const getWorldCase = async () => {
-        try {
-            const response = await axios.get(baseUrl);
-            const coronaReportElement = document.querySelector('world-bar');
-            coronaReportElement.coronaItem = response.data;
-        } catch (error) {
-            alert('Periksa koneksi internet Anda...');
-        }
-    };
-
-    getWorldCase();
-    getIndonesiaCase();
+    DataSource.getWorldCase();
+    DataSource.getIndonesiaCase();
 
     const date = new Date();
-    const footerYear = document.getElementById("footer-year");
-    footerYear.innerHTML = date.getFullYear();
+    $("#footer-year").text(date.getFullYear());
 
     gsap.from('.navbar', {
         duration: 1.5,
         y: -150,
         opacity: 0,
         ease: 'bounce',
+    });
+
+    gsap.from('section#world', {
+        duration: 1.8,
+        y: -400,
+        opacity: 0,
+        ease: 'sine',
+    });
+
+    gsap.from('section#indonesia', {
+        duration: 2.3,
+        y: -400,
+        opacity: 0,
+        ease: 'circ',
     });
 }
 

@@ -10,14 +10,15 @@ class WorldBar extends HTMLElement {
     render() {
         const dateUpdated = new Date(this._coronaItem.lastUpdate);
         const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        const dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', "Jum'at", 'Sabtu'];
         this.innerHTML = '';
         this.innerHTML = `
-            <div class="text-center text-light border-bottom" style="background-image: url(${img}); background-position: center; background-size: cover; padding: 10% 4%; background-repeat: no-repeat;">
+            <div class="text-center text-light border-bottom bg-covid" style="background-image: url(${img})">
                 <div class="container-fluid">
                     <div class="row mb-5">
                         <div class="col">
                             <h2 class="poppins-fm mb-3">COVID Live Update di Dunia (Global)</h2>
-                            <h4>Update data terakhir pada ${dateUpdated.getDate()} ${monthNames[dateUpdated.getMonth()]} ${dateUpdated.getFullYear()} ${dateUpdated.getUTCHours()}:${dateUpdated.getMinutes()}:${dateUpdated.getSeconds()}</h4>
+                            <h4>Update data terakhir pada ${dayNames[dateUpdated.getUTCDay()]}, ${dateUpdated.getUTCDate()} ${monthNames[dateUpdated.getUTCMonth()]} ${dateUpdated.getUTCFullYear()} ${dateUpdated.getUTCHours()}:${dateUpdated.getUTCMinutes()}:${dateUpdated.getUTCSeconds()}</h4>
                             <h5>Dari JHU CSSE COVID-19 Data (mathdroid API)</h5>
                         </div>
                     </div>

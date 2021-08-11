@@ -1,8 +1,6 @@
 import $ from "jquery";
 import gsap from "gsap";
 import DataSource from "../data/data-source.js";
-import "../component/indonesia-bar.js";
-import "../component/world-bar.js";
 
 const main = () => {
     DataSource.getWorldCase();

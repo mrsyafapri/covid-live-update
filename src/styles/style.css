@@ -10,11 +10,16 @@
     background-color: #900000;
 }
 
+.my-pt {
+    padding-top: 3.53rem;
+}
+
 .bg-covid {
-    background-image: url(../images/bg-covid.jpg);
+    background-image: url('../images/bg-covid.jpg');
+    background-color: #900000;
     background-position: center;
     background-size: cover;
-    padding: 8% 4%;
+    padding: 10% 4%;
     background-repeat: no-repeat;
 }
 
